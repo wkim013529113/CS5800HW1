@@ -24,7 +24,6 @@ public abstract class Employee {
 
     // Polymorphic pay calculation (weekly for this demo)
     public abstract double earnings();
-    System.out.println("This is a test");
 
     @Override
     public String toString() {
