@@ -13,10 +13,15 @@ public class Folder {
     private final List<Folder> subfolders = new ArrayList<>();
     private final List<FsFile> files = new ArrayList<>();
 
-    public Folder(String name) { setName(name); }
+    public Folder(String name) {
+        setName(name);
+    }
 
     // Getters (read-only views for safety)
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
+
     public List<Folder> getSubfolders() { return Collections.unmodifiableList(subfolders); }
     public List<FsFile> getFiles() { return Collections.unmodifiableList(files); }
 
@@ -65,7 +70,7 @@ public class Folder {
         files.clear();
     }
 
-    // ---------- Printing (ASCII tree) ----------
+    // ---------- Printing -------------------
     public void printTree() {
         System.out.println(getName() + "/");
         printChildren("", true);

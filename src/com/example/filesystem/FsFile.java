@@ -2,14 +2,16 @@ package com.example.filesystem;
 
 /** Simple file (owned by a Folder). */
 public class FsFile {
-    private String name; // e.g., ".htaccess", "index.html"
+    private String name; // e.g., "index.html", "system.css"
 
     public FsFile(String name) {
         setName(name);
     }
 
     // Getter / Setter
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         if (name == null || name.isBlank())
